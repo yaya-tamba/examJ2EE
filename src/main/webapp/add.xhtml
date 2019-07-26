@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <b:row styleClass="show-grid">
+            <b:column span="6" offset="3">
+                <f:view>
+
+
+                    <h:form>
+                        <h1><h:outputText value="Ajouter"/></h1>
+                        <h:panelGrid columns="2">
+                            <h:outputLabel value="Id:" for="id" />
+                            <h:inputText id="id" value="#{etudiantController.p.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
+                            <h:outputLabel value="Nom:" for="nom" />
+                            <h:inputText id="nom" value="#{etudiantController.p.nom}" title="Nom" required="true" requiredMessage="The Nom field is required."/>
+                            <h:outputLabel value="Prenom:" for="prenom" />
+                            <h:inputText id="prenom" value="#{etudiantController.p.prenom}" title="Prenom" required="true" requiredMessage="The Prenom field is required."/>
+                            <h:outputLabel value="DateNaiss:" for="dateNaiss" />
+                            <h:inputText id="dateNaiss" value="#{etudiantController.p.dateNaiss}" title="DateNaiss" required="true" requiredMessage="The DateNaiss field is required.">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:inputText>
+                            <h:outputLabel value="LieuNaiass:" for="lieuNaiass" />
+                            <h:inputText id="lieuNaiass" value="#{etudiantController.p.lieuNaiass}" title="LieuNaiass" required="true" requiredMessage="The LieuNaiass field is required."/>
+                            <h:outputLabel value="Matricul:" for="matricul" />
+                            <h:inputText id="matricul" value="#{etudiantController.p.matricul}" title="Matricul" required="true" requiredMessage="The Matricul field is required."/>
+                            <h:outputLabel value="Classe:" for="classe" />
+                            <h:inputText id="classe" value="#{etudiantController.p.classe}" title="Classe" required="true" requiredMessage="The Classe field is required."/>
+                        </h:panelGrid>
+                    </h:form>
+                </f:view>
+
+            </b:column>
+        </b:row>
+
+    </h:body>
+</html>
+
