@@ -13,7 +13,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -44,6 +44,12 @@
             <version>5.0</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>maven-group</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -94,15 +100,6 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <snapshotRepository>
-		<id>maven-snapshots</id>
-		<url>http://localhost:8081/repository/maven-snapshots/</url>
-	</snapshotRepository>
-    <repository>
-    	<id>maven-releases</id>
-     	<url>http://localhost:8081/repository/maven-releases/</url>
-    </repository>
-  </distributionManagement>
+    
 
 </project>
