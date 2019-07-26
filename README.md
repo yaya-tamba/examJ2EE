@@ -1,1 +1,1 @@
-<img src="docs/app.png"/>
+Projet de maven mise en plce d'un environnemt de CI 
